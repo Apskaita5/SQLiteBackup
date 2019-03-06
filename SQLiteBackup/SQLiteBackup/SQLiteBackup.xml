@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SQLiteBackup</name>
+    </assembly>
+    <members>
+        <member name="P:System.Data.SQLite.ExportCompleteArgs.TimeStart">
+            <summary>
+            The Starting time of export process.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ExportCompleteArgs.TimeEnd">
+            <summary>
+            The Ending time of export process.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ExportCompleteArgs.TimeUsed">
+            <summary>
+            Total time used in current export process.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ImportCompleteArgs.TimeStart">
+            <summary>
+            The starting time of import process.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ImportCompleteArgs.TimeEnd">
+            <summary>
+            The ending time of import process.
+            </summary>
+        </member>
+        <member name="T:System.Data.SQLite.ImportCompleteArgs.CompleteType">
+            <summary>
+            Enum of completion type
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ImportCompleteArgs.HasErrors">
+            <summary>
+            Indicates whether the import process has error(s).
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ImportCompleteArgs.LastError">
+            <summary>
+            The last error (exception) occur in import process.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:System.Data.SQLite.ImportCompleteArgs.CompletedType" -->
+        <member name="P:System.Data.SQLite.ImportCompleteArgs.TimeUsed">
+            <summary>
+            Total time used in current import process.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ImportProgressArgs.CurrentBytes">
+            <summary>
+            Number of processed bytes in current import process.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ImportProgressArgs.TotalBytes">
+            <summary>
+            Total bytes to be processed.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ImportProgressArgs.PercentageCompleted">
+            <summary>
+            Percentage of completeness.
+            </summary>
+        </member>
+        <member name="T:System.Data.SQLite.ExportInformations">
+            <summary>
+            Informations and Settings of SQLite Database Export Process
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ExportInformations.ExcludeTables">
+            <summary>
+            Gets or Sets the tables (black list) that will be excluded for export. The rows of the these tables will not be exported too.
+            </summary>
+        </member>
+        <member name="M:System.Data.SQLite.ExportInformations.GetDocumentHeaders">
+            <summary>
+            Gets the list of document headers.
+            </summary>
+            <returns>List of document headers.</returns>
+        </member>
+        <member name="M:System.Data.SQLite.ExportInformations.SetDocumentHeaders(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the document headers.
+            </summary>
+            <param name="lstHeaders">List of document headers</param>
+        </member>
+        <member name="M:System.Data.SQLite.ExportInformations.GetDocumentFooters">
+            <summary>
+            Gets the document footers.
+            </summary>
+            <returns>List of document footers.</returns>
+        </member>
+        <member name="M:System.Data.SQLite.ExportInformations.SetDocumentFooters(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the document footers.
+            </summary>
+            <param name="lstFooters">List of document footers.</param>
+        </member>
+        <member name="P:System.Data.SQLite.ExportInformations.TablesToBeExportedList">
+            <summary>
+            Gets or Sets the list of tables that will be exported. If none, all tables will be exported.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ExportInformations.TablesToBeExportedDic">
+            <summary>
+            Gets or Sets the tables that will be exported with custom SELECT defined. If none or empty, all tables and rows will be exported. Key = Table's Name. Value = Custom SELECT Statement. Example 1: SELECT * FROM `product` WHERE `category` = 1; Example 2: SELECT `name`,`description` FROM `product`;
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.RecordDumpTime">
+            <summary>
+            Gets or Sets a value indicates whether the Dump Time should recorded in dump file.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.EnableEncryption">
+            <summary>
+            Gets or Sets a value indicates whether the Exported Dump File should be encrypted. Enabling encryption will slow down the whole process.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.EncryptionPassword">
+            <summary>
+            Sets the password used to encrypt the exported dump file.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.ExportTableStructure">
+            <summary>
+            Gets or Sets a value indicates whether the Table Structure (CREATE TABLE) should be exported.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.ExportRows">
+            <summary>
+            Gets or Sets a value indicates whether the Rows should be exported.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.MaxSqlLength">
+            <summary>
+            Gets or Sets the maximum length for combining multiple INSERTs into single sql. Default value is 5MB. Only applies if RowsExportMode = "INSERT" or "INSERTIGNORE" or "REPLACE". This value will be ignored if RowsExportMode = ONDUPLICATEKEYUPDATE or UPDATE.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.ExportTriggers">
+            <summary>
+            Gets or Sets a value indicates whether the Stored Triggers should be exported.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.ExportViews">
+            <summary>
+            Gets or Sets a value indicates whether the Stored Views should be exported.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ExportInformations.IntervalForProgressReport">
+            <summary>
+            Gets or Sets a value indicates the interval of time (in miliseconds) to raise the event of ExportProgressChanged.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.GetTotalRowsBeforeExport">
+            <summary>
+            Gets or Sets a value indicates whether the totals of rows should be counted before export process commence. The value of total rows is used for progress reporting. Extra time is needed to get the total rows. Sets this value to FALSE if not applying progress reporting.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ExportInformations.RowsExportMode">
+            <summary>
+            Gets or Sets a enum value indicates how the rows of each table should be exported. INSERT = The default option. Recommended if exporting to a new database. If the primary key existed, the process will halt; INSERT IGNORE = If the primary key existed, skip it; REPLACE = If the primary key existed, delete the row and insert new data; OnDuplicateKeyUpdate = If the primary key existed, update the row. If all fields are primary keys, it will change to INSERT IGNORE; UPDATE = If the primary key is not existed, skip it and if all the fields are primary key, no rows will be exported.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ImportInformations.EnableEncryption">
+            <summary>
+            Gets or Sets a value indicates whether the Imported Dump File is encrypted.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ImportInformations.EncryptionPassword">
+            <summary>
+            Sets the password used to decrypt the exported dump file.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ImportInformations.IntervalForProgressReport">
+            <summary>
+            Gets or Sets a value indicates the interval of time (in miliseconds) to raise the event of ExportProgressChanged.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.ImportInformations.TargetDatabase">
+            <summary>
+            Gets or Sets the name of target database.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ImportInformations.IgnoreSqlError">
+            <summary>
+            Gets or Sets a value indicates whether SQL errors occurs in import process should be ignored.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.ImportInformations.ErrorLogFile">
+            <summary>
+            Gets or Sets the file path used to log error messages.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.SQLiteBackup.Database">
+            <summary>
+            Gets the information about the connected database.
+            </summary>
+        </member>
+        <member name="P:System.Data.SQLite.SQLiteBackup.Command">
+            <summary>
+            Gets or Sets the instance of MySqlCommand.
+            </summary>
+        </member>
+    </members>
+</doc>
